@@ -1,0 +1,40 @@
+body
+{
+  font-family:'EUROSTYLE';
+  color: white;
+  display: flex;
+  flex-direction: row;
+  background-color:#691377
+}
+
+@media only screen and (min-width: 768px)
+{
+  #navbar
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    padding:20px;
+    
+  }
+
+#main-doc
+{
+  margin-left:240px;
+  padding:20px;
+}
+}
+  
+#navbar a:hover {
+  background-color: white;
+}
+
+#topic
+{
+  font-family: Monospace;
+  font-size:20px;
+}
