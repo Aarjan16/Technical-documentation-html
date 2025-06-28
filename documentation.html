@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      document
+      </title>
+      <link href="styles.css" rel="stylesheet">
+      </head>
+
+<body>
+  <main id="main-doc">
+    
+      <nav id="navbar">
+  <header>PHP DOCUMENTATION</header>
+  <ul>
+  <li><a class="nav-link" href="#Introduction_to_PHP">Introduction to PHP </a></li>
+
+  <li><a class="nav-link" href="#Variables">Variables</a></li>
+  
+  <li><a class="nav-link" href="#Control_structures">Control structures</a></li>
+
+  <li><a class="nav-link" href="#Importance">Importance</a></li>
+
+  <li><a class="nav-link" href="#Codes">Codes</a></li>
+  </ul>
+
+</nav>
+
+
+
+ <section class="main-section" id="Introduction_to_PHP">
+
+      <header><h1> Introduction to PHP</h1></header>
+      <p id="intro">PHP (Hypertext Preprocessor) is a popular open-source server-side scripting language designed primarily for web development but also used as a general-purpose programming language. PHP scripts are executed on the server, and the result is returned as plain HTML to the client's browser.
+
+PHP can interact with databases, handle forms, manage sessions, and perform many server-side tasks dynamically.
+</p>
+<p>Imp note
+<ul>
+  <li>It is very important for database handling</li>
+  </ul>
+  </ul>
+  </p>
+
+</section>
+<hr>
+<section class="main-section" id="Variables">
+  <header><h1>Variables</h1></header>
+  <p>Variables in PHP start with a dollar sign $ and do not require explicit type declarations.<p>
+    <p>declaration of dollar sign is very important in php</p>
+    <p>Rules to declare variables:
+      <ul>
+        <li>Must start with a letter or underscore </li>
+        <li>Followed by any number of letters, numbers, or underscores</li>
+        <li>case sensitive</li>
+        </p>
+      </section>
+<section class="main-section" id="Control_structures">
+  <header><h1>Control structures</h1></header>
+  <p>if else statement</p>
+  <pre><code>
+   &lt;?php
+  $a=4;
+  if($a%2==0)
+  {
+    echo"even";
+  }
+  else 
+  echo"odd:
+  }
+  </code></pre>
+  <p>
+    While loop</p>
+    <pre><code>
+&lt;?php
+$count = 0;
+while ($count < 5) {
+    echo $count;
+    $count++;
+}
+?>
+</code></pre>
+<hr>
+      </section>
+<section class="main-section" id="Importance">
+  <header><h1>Importance</h1></header>
+  <p>PHP (Hypertext Preprocessor) is one of the most widely used server-side scripting languages for web development. Here’s why PHP is important:
+
+</p>
+<ul>
+  <li>Server-Side Scripting</li>
+  <li>easy to learn and use</li>
+  <p> php is an important tool in web developing</p>
+      </section>
+      <hr>
+<section class="main-section" id="Codes">
+  <header><h1>Codes</h1></header>
+  <p id="topic">Greetings forms code in php</p>
+<div class="code1">
+  <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;Greeting Form&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form method="POST"&gt;
+    Enter your name: 
+    &lt;input type="text" name="username" required&gt;
+    &lt;input type="submit" value="Greet Me"&gt;
+&lt;/form&gt;
+
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the username from POST data and sanitize it
+    $name = htmlspecialchars(trim($_POST['username']));
+    echo "&lt;h2&gt;Hello, " . $name . "! Welcome!&lt;/h2&gt;";
+}
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+<div class="code2">
+  <p id="topic">Palindrome or not</p>
+<pre><code>
+&lt;?php
+function isPalindrome($string) {
+    $cleaned = strtolower(str_replace(' ', '', $string));
+    $reversed = strrev($cleaned);
+    return $cleaned === $reversed;
+}
+
+$input = "Madam";
+
+if (isPalindrome($input)) {
+    echo "'$input' is a palindrome.";
+} else {
+    echo "'$input' is not a palindrome.";
+}
+?&gt;
+</code></pre>
+</div>
+<div>
+  <p id="topic">SUM</p>
+  <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;Sum of Two Numbers&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form method="POST"&gt;
+    Enter first number:
+    &lt;input type="number" name="num1" required&gt;&lt;br&gt;
+    Enter second number:
+    &lt;input type="number" name="num2" required&gt;&lt;br&gt;
+    &lt;input type="submit" value="Calculate Sum"&gt;
+&lt;/form&gt;
+
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $sum = $_POST['num1'] + $_POST['num2'];
+    echo "Sum: " . $sum;
+}
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+</main>
+</body>
+</html>
+
+
